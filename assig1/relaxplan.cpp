@@ -57,9 +57,10 @@ RelaxPlan::~RelaxPlan()
 {
     while (head != NULL)
     {
-        Relaxation* temp = head;
+        // need to record next first, if after delete head, can't find head->next
+        Relaxation* next = head->get_next();
         delete head;
-        head = temp->get_next();
+        head = next ;
     }
 }
 
