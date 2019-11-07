@@ -1,0 +1,1 @@
+skeleton.o: ../skeleton.cpp
